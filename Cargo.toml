@@ -1,0 +1,20 @@
+[package]
+name = "akc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.17"
+env_logger = "0.10.0"
+eframe = "0.20.1"
+anyhow = { version = "1.0.68" }
+livesplit-hotkey = "0.7.0"
+rdev = "0.5.2"
+
+[profile.release]
+opt-level = "z"
+panic = "abort"
+lto = true
+strip = true
